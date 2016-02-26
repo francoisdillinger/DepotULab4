@@ -52,20 +52,30 @@
                                   
                             }
                             box.ondblclick = function() {
-                                
-                                 if (nums % 2 === 0) {
-                                 var oldString = nums.toString();
-                                 var right = document.getElementById(oldString).nextElementSibling;
-                                 document.body.removeChild(right);
-                                    }
-                                else if (nums % 2 != 0) {
-                                 var oldString = nums.toString();
-                                 var left = document.getElementById(oldString).previousElementSibling;
+                                var oldString = nums.toString();
                                  
-                                 document.body.removeChild(left);
-                                }
+                                 if (nums % 2 === 0) {
+                                 var right = document.getElementById(oldString).nextElementSibling;
+                                 if (right === null) {
+                                       alert('none left'); 
+                                    }
+                                    else {
+                                        right.parentNode.removeChild(right);
+                                    }
+                                 }
+                               
+                                else if (nums % 2 !== 0) {
+                                 var left = document.getElementById(oldString).previousElementSibling;
+                                 if (left === null) {
+                                       alert('none left'); 
+                                    }
+                                    else {
+                                        left.parentNode.removeChild(left);
+                                    }
+                                 }
+                                
                                 else {
-                                    
+                                    console.log('none');
                                 }
                             } 
                           }

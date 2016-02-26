@@ -1,0 +1,15 @@
+button {
+    color: yellow;
+    background-color: black;
+    position: fixed;
+    margin-right: 40px;
+}
+.group {
+    width: 90px;
+    height: 90px;
+    margin: 30px;
+    float: left;
+    background-color: black;
+    
+    
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="styles.css">
+		<script>
+			//JS Goes Here
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                     
+                     var btn = document.createElement('button');
+                     document.body.appendChild(btn);
+                     var letters = document.createTextNode('Click Me Now!');      
+                     btn.appendChild(letters);  
+                     var bigBox = document.createElement('div');
+                     bigBox.id = 'main';
+                     document.body.appendChild(bigBox);
+                     
+                     
+                   
+                   
+                     
+                     btn.onclick = function() {
+                        
+                        
+                        var box = document.createElement('div');
+                        var list = document.getElementsByClassName('group');
+                        box.className = 'group';
+                        box.id = '' + list.length;
+                        document.getElementById('main').appendChild(box);
+                        
+                        
+                        var numBer = document.createTextNode(box.id);
+                        box.appendChild(numBer);
+                        var nums = parseInt(box.id)
+                        
+                        console.log(nums);
+                       
+                     
+                            box.onmouseover = function() {
+                            box.style.color = 'white';
+                            box.style.fontSize = '80px';
+                            box.style.textAlign = 'center';
+                            }
+                            box.onmouseout = function() {
+                            box.style.color = 'black';
+                            }
+                            box.onclick = function() {
+                                x = Math.floor(Math.random() * 5);
+                               var array = ['red','blue','green','purple','pink'];
+                               box.style.backgroundColor = array[x];
+                               
+                                  
+                            }
+                            box.ondblclick = function() {
+                                
+                                 if (nums % 2 === 0) {
+                                 var oldString = nums.toString();
+                                 var right = document.getElementById(oldString).nextElementSibling;
+                                 document.body.removeChild(right);
+                                    }
+                                else if (nums % 2 != 0) {
+                                 var oldString = nums.toString();
+                                 var left = document.getElementById(oldString).previousElementSibling;
+                                 
+                                 document.body.removeChild(left);
+                                }
+                                else {
+                                    
+                                }
+                            } 
+                          }
+                       });      
+                         
+                   
+                     
+               
+                    
+                           
+                            
+                          
+                            
+                                    
+                        
+                         
+
+                         
+                        
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                        
+
+            
+		</script>
+	</head>
+	<body>
+		<!-- DO NOT ADD ANY HTML HERE -->
+	</body>
+</html>
